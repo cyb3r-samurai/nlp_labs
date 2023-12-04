@@ -30,7 +30,7 @@ s = predictor.predict(word_tokenize(st))
 ans = []
 
 for i in range(0, len(s)-1):
-    if(s[i].pos == 'NOUN' or s[i].pos == 'ADJ' or 
+    if(s[i].pos == 'NOUN' or s[i].pos == 'ADJ' and 
        s[i+1].pos == 'NOUN' or s[i+1].pos == 'ADJ'):
         tag1 = unpack(s[i].tag)
         tag2 = unpack(s[i+1].tag)
