@@ -12,7 +12,7 @@ f.close()
 def checker (a, b: str):
     p = morph.parse(a)[0]
     p1 = morph.parse(b)[0]
-    if(p.tag.POS == 'NOUN' or p.tag.POS == 'ADJF' or
+    if(p.tag.POS == 'NOUN' or p.tag.POS == 'ADJF' and
        p1.tag.POS == 'NOUN' or p1.tag.POS == 'ADJF'):
         if(p.tag.case == p1.tag.case and p.tag.number == p1.tag.number 
            and p.tag.gender == p1.tag.gender):
